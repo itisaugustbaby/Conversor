@@ -1,5 +1,5 @@
-from . import __init__
+import __init__
 
-app = create_app()
+app = __init__.create_app()
 
 app.run('0.0.0.0')
