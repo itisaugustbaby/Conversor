@@ -9,7 +9,7 @@ def create_app(test_config=None):
     @app.route('/inicial')
     def teste():
         return 'tela teste'
-    from . import homepage
+    import homepage
     app.register_blueprint(homepage.bp)
     app.add_url_rule('/',endpoint='index')
     return app
