@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static',filename='styles/stylr.css') }}" rel="stylesheet">
+    <title>Youtube Downloader</title>
+</head>
+<body>
+    <section class="thumb">
+        <img src="{{ url_for('static',filename='img/standby.webp') }}" width="570px" height="350px" alt="Video downloader">
+       <!-- <h3 id="titulo">Título do vídeo aqui</h3> -->
+    </section>
+    <aside><h1>Baixe seu vídeo ou audio de vídeos no Youtube</h1>
+            {% for message in get_flashed_messages() %}
+                <div class='flash'>{{message}}</div>
+            {% endfor %}
+            <form method='post'>
+                <input name='url' id='url' size="70" placeholder='Por exemplo: https://www.youtube.com/watch?v=R6F9BzOeo2Y'>
+                <section id="opcoes">
+                <label for="type">Escolha a opção:</label>
+                    <select name="type">
+                        <option value="video">Video</option>
+                        <option value="audio">Audio</option>
+                    </select>
+                <input type='submit' value='Baixar'>
+            </section>
+        </form>  
+    </aside>
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.thumb{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(203, 230, 230);
+    align-items: center;
+    border-style: solid;
+    border-width: 5px;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+#opcoes{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+#titulo{
+    font-style: italic;
+}
+.flash{
+    color: red;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
